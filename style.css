@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #e4e4e4 url(../w3images/architect.jpg) center bottom;
+  background: #e4e4e4 url(../w3images/architect.jpg);
   background-size: cover;
   min-height: 100vh;
   font-family:arial;
