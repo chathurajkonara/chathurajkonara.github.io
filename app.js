@@ -20,6 +20,8 @@ document.getElementById("myButton").onclick = function () {
 function sendEmail(name, phone, email, details, address, city, type, comment)
 {
 
+try {
+
 Email.send({
 Host: "smtp.gmail.com",
 Username: "cranbournecleantec@gmail.com",
@@ -30,6 +32,11 @@ Subject: name.concat(' asks for an Estimate'),
 Body: name.concat('<br/><br/>Phone: ').concat(phone).concat('<br/>Email: ').concat(email).concat(' <br/>Property Details: ').concat(details).concat('<br/>Address: ').concat(address).concat('<br/>City/Post Code: ').concat(city).concat('<br/>Property Type: ').concat(type).concat('<br/>Comments: ').concat(comment).concat('<br/>')
 
 }).then(alert(" Thank You for your inquiry!  We will get in touch with you within two Business days!"));
-
-
 }
+catch(err) {
+  document.getElementById("err").innerHTML = err.message;
+}
+}
+
+
+
