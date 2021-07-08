@@ -1,11 +1,24 @@
 ﻿
 document.getElementById("myButton").onclick = function () {
 	
-	validateForm()
-
     var myName = document.getElementById("myName").value;
+	  if (myName == "") {
+		  alert("Name must be filled out");
+		  return false;
+		  }
+       
     var myPhone = document.getElementById("myPhone").value;
+	  if (myPhone == "") {
+		  alert("Phone number must be filled out");
+		  return false;
+		  }
+	
     var myEmail = document.getElementById("myEmail").value;
+	  if (myEmail == "") {
+		  alert("Email must be filled out");
+		  return false;
+		  }
+	
     var myDetails = document.getElementById("myDetails").value;
     var myAddress = document.getElementById("myAddress").value;
     var myCity = document.getElementById("myCity").value;
@@ -40,11 +53,4 @@ catch(err) {
 }
 }
 
-function validateForm() {
-  let name = document.forms["myForm"]["Name"].value;
-  if (name == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
 
