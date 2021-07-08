@@ -1,5 +1,7 @@
 ﻿
 document.getElementById("myButton").onclick = function () {
+	
+	validateForm()
 
     var myName = document.getElementById("myName").value;
     var myPhone = document.getElementById("myPhone").value;
@@ -38,5 +40,11 @@ catch(err) {
 }
 }
 
-
+function validateForm() {
+  let name = document.forms["myForm"]["Name"].value;
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
 
